@@ -1,0 +1,34 @@
+﻿@model gloryhall.Data.ViewModels.EditMatchViewModel
+@{
+    ViewBag.Title = "Редактирование турнира";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<form asp-action="Edit" asp-controller="Match">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <input type="hidden" asp-for="id" />
+    </div>
+    <div class="form-group">
+        <label asp-for="name" class="control-label">Название</label>
+        <input type="text" asp-for="name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="team1" class="control-label">Команда1</label>
+        <input type="text" asp-for="team1" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="team2" class="control-label">Команда2</label>
+        <input type="text" asp-for="team2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="scoresTeam1" class="control-label">очки Команды1</label>
+        <input type="number" asp-for="scoresTeam1" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="scoresTeam2" class="control-label">очки Команды2</label>
+        <input type="number" asp-for="scoresTeam2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />
+    </div>
+</form>

@@ -1,0 +1,7 @@
+﻿{
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=tcp:gloryhall.database.windows.net,1433;Database=test;User ID=risa4an;Password=2610Kate;Encrypt=true;Connection Timeout=30;"
+
+  }
+}

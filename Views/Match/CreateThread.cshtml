@@ -1,0 +1,17 @@
+﻿@model gloryhall.Data.ViewModels.CreateThreadViewModel
+@{
+    ViewBag.Title = "Добавление треда";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<form asp-action="CreateThread" asp-controller="Match" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label asp-for="name" class="control-label">Название</label>
+        <input type="text" asp-for="name" class="form-control" />
+        <input type="hidden" asp-for="id" value="@Model.id" />
+    </div>
+    
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />
+    </div>
+</form>
